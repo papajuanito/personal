@@ -1,0 +1,17 @@
+{
+    "name": "emerge-americas",
+    "version": "2.0.0",
+    "devDependencies": {
+        "requirejs": "~2.1.8",
+        "require-css": "~0.0.8",
+        "foundation": "~5.0.2",
+        "scut": "~0.7.2",
+        "bourbon": "~3.1.8",
+        "mathsass": "~0.9.2",
+        "jquery.finger": "~0.0.11",
+        "jquery": "~2.0.3"
+    },
+    "dependencies": {
+        "requirejs-plugins": "~1.0.2"
+    }
+}
