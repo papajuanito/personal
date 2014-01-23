@@ -1,0 +1,115 @@
+/**
+ * View: Register
+ */
+
+body[data-route="register"] {
+    padding-bottom: 108px;
+}
+
+#view-register {
+    .section-stripes {
+        text-align: center;
+    }
+
+    .pricing-disclaimer {
+        @extend %contain;
+        @extend %scut-list-unstyled;
+        margin: 0;
+        font-size: rem-calc(14px);
+    }
+
+    .button {
+        display: block;
+        margin: 1rem auto 0;
+        width: rem-calc(200px);
+        font-size: rem-calc(18px);
+    }
+}
+
+#register-pricing-modules {
+    @extend %scut-list-unstyled;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+    text-align: center;
+
+    li {
+        float: left;
+        padding: 0 .25rem;
+        width: 20%;
+    }
+}
+
+.pricing-single {
+    height: rem-calc(125px);
+    padding: 0 0 1rem 0;
+    background: #5b6c7e;
+    border: 1px solid #3e4a56;
+    border-top: 0;
+    border-radius: 3px;
+    box-shadow: inset 0 0 2px rgba(#fff, .5);
+    color: #fff;
+    text-align: center;
+
+    h4 {
+        margin: 0 0 1rem;
+        padding: .5rem 0;
+        background: darken(#5b6c7e, 15%);
+        border-radius: 3px 3px 0 0;
+        color: white;
+        font-size: rem-calc(15px);
+    }
+
+    .desc {
+        display: block;
+        margin: 0 1em;
+        color: lighten(#5b6c7e, 30%);
+        font-size: rem-calc(14px);
+
+        &.is-loner {
+            margin-top: rem-calc(20px);
+            color: white;
+        }
+    }
+
+    strong {
+        font-size: rem-calc(32px);
+        line-height: 1;
+    }
+
+    .alternate {
+        margin-top: rem-calc(15px);
+
+        strong {
+            font-size: rem-calc(24px);
+        }
+    }
+
+    &.is-featured {
+        position: relative;
+        top: rem-calc(-30px);
+        height: auto;
+    }
+}
+
+#register-footer {
+    z-index: 10;
+    padding: 2rem 0;
+    background: $color-emerge-blue;
+    border-top: 1px solid darken($color-emerge-blue, 10%);
+    color: white;
+    text-align: center;
+    @include scut-fixed(n 0 0 0);
+
+    strong {
+        font-size: rem-calc(18px)
+    }
+    p {
+        margin: 0;
+    }
+    a {
+        display: inline-block;
+        color: white;
+        border-bottom: 1px solid white;
+        font-weight: bold;
+    }
+}

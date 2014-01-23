@@ -1,0 +1,229 @@
+//
+// Site Footer
+//
+
+#footer {
+    @extend %emerge-divider;
+    padding: em-calc(50px) 0 0;
+    background: $color-darkest-gray;
+    color: #cccccc;
+    .logo-emerge {
+        float: left;
+    }
+    .h6 {
+        margin: 0;
+        color: #cccccc;
+        line-height: 1;
+    }
+    p {
+        margin-top: 1em;
+        font-size: em-calc(14px);
+    }
+}
+
+%footer-module {
+    $column-gutter: rem-calc(50);
+    @include grid-column($columns: 3);
+    border-left: 1px solid lighten($color-darkest-gray, 10%);
+    border-right: 1px solid darken($color-darkest-gray, 50%);
+    min-height: em-calc(185px);
+}
+
+.footer-nav {
+    @extend %footer-module;
+    padding-left: 0;
+    border-left: 0;
+    nav {
+        float: left;
+        padding-left: 1em;
+    }
+    a {
+        display: block;
+        margin-bottom: 1em;
+        color: #cccccc;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-contact {
+    @extend %footer-module;
+    .contact_point {
+        margin-top: 1em;
+        font-size: em-calc(14px);
+    }
+    a {
+        display: block;
+        margin: .5rem 0 0;
+        word-wrap: break-word;
+    }
+}
+
+.footer-sponsorships {
+    @extend %footer-module;
+    .button {
+        display: block;
+        padding: $button-sml;
+        font-size: $button-font-sml;
+    }
+}
+
+.footer-social {
+    @extend %footer-module;
+    border-right: 0;
+    ul {
+        @extend %scut-list-unstyled;
+        margin: 0;
+        width: 150px;
+    }
+    li {
+        display: inline-block;
+        margin: 0 5px 5px 0;
+    }
+}
+
+// Social
+%social-button {
+    @extend %scut-image-replace;
+    @include inline-block;
+    @include scut-size(41px);
+    @include retina-image("../img/sprite-footer-social-icons", 283px 85px);
+    background-repeat: no-repeat;
+}
+.social-facebook {
+    @extend %social-button;
+    background-position: 0 0;
+    &:hover, &:focus {
+        background-position: 0 100%;
+    }
+}
+.social-twitter {
+    @extend %social-button;
+    background-position: -49px 0;
+    &:hover, &:focus {
+        background-position: -49px 100%;
+    }
+}
+.social-instagram {
+    @extend %social-button;
+    background-position: -97px 0;
+    &:hover, &:focus {
+        background-position: -97px 100%;
+    }
+}
+.social-tumblr {
+    @extend %social-button;
+    background-position: -145px 0;
+    &:hover, &:focus {
+        background-position: -145px 100%;
+    }
+}
+.social-linkedin {
+    @extend %social-button;
+    background-position: -194px 0;
+    &:hover, &:focus {
+        background-position: -194px 100%;
+    }
+}
+.social-youtube {
+    @extend %social-button;
+    background-position: 100% 0;
+    &:hover, &:focus {
+        background-position: 100% 100%;
+    }
+}
+
+// Footer partners list
+#footer-partners {
+    clear: both;
+    padding: 1rem 0;
+    .list {
+        @extend %block-list;
+        margin: 1rem 0 0;
+        padding: 1rem 0 0;
+        border-top: 1px solid lighten($color-darkest-gray, 10%);
+        li {
+            padding: 0 2rem;
+            width: auto;
+        }
+        a {
+            height: 50px;
+            opacity: .5;
+
+            &:hover {
+                opacity: .75;
+            }
+        }
+    }
+    .partner-miami {
+        @include scut-size(100px 47px);
+        @include retina-image("../img/partners/logo-miami-dade-county-footer", 100px 47px);
+    }
+    .partner-knight {
+        @include scut-size(223px 30px);
+        @include retina-image("../img/partners/logo-knight-foundation-footer", 223px 30px);
+    }
+    .partner-medina {
+        @include scut-size(220px 26px);
+        @include retina-image("../img/partners/logo-medina_capital-footer", 220px 26px);
+    }
+    .partner-gt {
+        @include scut-size(200px 33px);
+        @include retina-image("../img/partners/logo-greenberg_traurig-footer", 200px 33px);
+    }
+}
+
+// Copyright bar
+#footer-copyright {
+    background: black;
+    color: $body-font-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    .contain {
+        position: relative;
+        display: block;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: rem-calc(12px);
+    }
+}
+.nobox-powered {
+    @extend %scut-image-replace;
+    right: 0;
+    display: block;
+    width: 155px;
+    background: url("../img/bg-nobox-powered.png");
+    @include scut-center-absolutely(n 29px);
+}
+
+// Newsletter promo bar at footer
+#newsletter-promo {
+    padding: 1.5rem 0;
+    background: #f0f0f0;
+    p {
+        margin: 0;
+        text-align: left;
+        @include grid-column(6);
+    }
+    .newsletter-form {
+        @include grid-column(6);
+        text-align: right;
+    }
+    input[type="email"], .button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input[type="email"] {
+        display: inline-block;
+        margin: 0 -2px;
+        width: 65%;
+        font-size: rem-calc(16px);
+    }
+    .button {
+        display: inline-block;
+        margin: 0 -2px 0 5%;
+        padding: rem-calc(12px) 0;
+        width: 25%;
+    }
+}

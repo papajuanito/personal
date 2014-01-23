@@ -1,0 +1,77 @@
+//
+// Exhibitions modules
+//
+
+$color-exhibition-mayoral: #06acec;
+$color-exhibition-challenge: #f1c40f;
+$color-exhibition-pavilion: #ed145b;
+$color-exhibition-startup: #68c39f;
+
+.exhibitions {
+    @extend %scut-list-unstyled;
+    @extend %scut-clearfix;
+    margin: 0;
+    @include block-grid($per-row: 4, $spacing: rem-calc(26px), $base-style: false);
+
+    & > li {
+        float: left;
+    }
+}
+
+// Exhibition placeholder
+%exhibition-module {
+    position: relative;
+    display: block;
+
+    img { width: 100%; }
+
+    i[role="presentation"] {
+        height: 5px;
+        background-color: inherit;
+        @include scut-absolute(n 0 0 0);
+        @include transition(height .2s ease-out);
+    }
+
+    &:after, &:before { content: ''; }
+
+    &:after {
+        @extend %scut-absolute;
+        @include scut-triangle(top-left, 1rem, inherit);
+    }
+    &:before {
+        @include scut-absolute(0 0 n n);
+        @include scut-triangle(top-right, 1rem, inherit);
+    }
+
+    .no-touch &:hover, &:focus {
+        i[role="presentation"] {
+            height: 100%;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            @include retina-image('../img/bg-crosshairs', 42px 42px);
+        }
+    }
+}
+
+// Exhibition mixin
+@mixin exhibition-module-generator($color) {
+    @extend %exhibition-module;
+    background: $color;
+    color: $color;
+
+    .no-touch &:hover, &:focus { color: $color; }
+}
+
+// Exhibition classes
+// .exhibition-mayoral {
+//     @include exhibition-module-generator($color-exhibition-mayoral);
+// }
+// .exhibition-challenge {
+//     @include exhibition-module-generator($color-exhibition-challenge);
+// }
+// .exhibition-pavilion {
+//     @include exhibition-module-generator($color-exhibition-pavilion);
+// }
+// .exhibition-startup {
+//     @include exhibition-module-generator($color-exhibition-startup);
+// }

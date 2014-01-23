@@ -1,0 +1,197 @@
+/**
+ * Summits icons, hexagons and section headlines
+ */
+
+$color-summit-health: #68c39f;
+$color-summit-innovate: #ed145b;
+$color-summit-money: #f1c40f;
+$color-summit-cities: #8393a5;
+$color-summit-entertain: #fc7a30;
+$color-summit-smart: #00aeef;
+
+// Summit hexagon mixin
+@mixin summit-hexagon-generator($size, $is-anchor: false) {
+    @include hexagon($width: $size, $is_solid: true);
+    margin: rem-calc(23px 3px);
+    overflow: visible;
+    color: white;
+    font-size: em-calc(18px);
+    font-family: $header-font-family;
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+}
+
+// Add icons and colors
+.summit-innovate {
+    background-color: $color-summit-innovate;
+    background-image: url("../svg/icon-innovate.svg");
+    background-size: rem-calc(23px 40px);
+}
+
+.summit-health {
+    background-color: $color-summit-health;
+    background-image: url("../svg/icon-health.svg");
+    background-size: rem-calc(35px 30px);
+}
+
+.summit-money {
+    background-color: $color-summit-money;
+    background-image: url("../svg/icon-money.svg");
+    background-size: rem-calc(34px 30px);
+}
+
+.summit-cities {
+    background-color: $color-summit-cities;
+    background-image: url("../svg/icon-cities.svg");
+    background-size: rem-calc(41px 32px);
+}
+
+.summit-entertain {
+    background-color: $color-summit-entertain;
+    background-image: url("../svg/icon-entertain.svg");
+    background-size: rem-calc(40px 38px);
+}
+
+.summit-smart {
+    background-color: $color-summit-smart;
+    background-image: url("../svg/icon-smart.svg");
+    background-size: rem-calc(35px 38px);
+}
+
+// Summits honeycomb navigation
+%summit-nav-hexagon {
+    @include summit-hexagon-generator($size: rem-calc(130px), $is_anchor: true);
+    @include transition(background-color .3s linear);
+    display: inline-block;
+
+    span {
+        display: block;
+        color: white;
+        opacity: 0;
+        @include scut-vcenter-lh(rem-calc(75px));
+        @include transform(translate3d(20px, 0, 0));
+        @include transition-property(opacity, transform);
+        @include transition-duration(0.2s);
+        @include transition-timing-function(ease-out)
+    }
+
+    .no-touch &:hover, &:focus {
+        background-image: none;
+        span {
+            opacity: 1;
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+}
+
+.summits-nav {
+    @extend %scut-list-unstyled;
+    position: relative;
+    z-index: 1;
+    margin: 2rem 0;
+    background: url("../img/bg-summits-nav.png") no-repeat center;
+    background-size: rem-calc(130px) auto;
+    text-align: center;
+    a {
+        display: inline-block;
+    }
+    .summit-innovate {
+        @extend %summit-nav-hexagon;
+    }
+    .summit-health {
+        @extend %summit-nav-hexagon;
+        background-size: rem-calc(41px 35px);
+    }
+    .summit-money {
+        @extend %summit-nav-hexagon;
+        background-size: rem-calc(40px 27px);
+    }
+    .summit-cities {
+        @extend %summit-nav-hexagon;
+        background-size: rem-calc(45px 35px);
+    }
+    .summit-entertain {
+        @extend %summit-nav-hexagon;
+        background-size: rem-calc(40px 38px);
+    }
+    .summit-smart {
+        @extend %summit-nav-hexagon;
+        background-size: rem-calc(35px);
+    }
+}
+
+.summits-nav-center {
+    display: inline-block;
+    margin: rem-calc(23px 3px);
+    vertical-align: middle;
+    @include scut-size(rem-calc(130px 75px));
+}
+
+// Summit headlines (used on Speakers view)
+
+%headline-summit {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: rem-calc(70px) 0 0;
+    border-top: 8px solid;
+    color: $body-font-color;
+    font-size: rem-calc(32px);
+    text-align: center;
+}
+
+%headline-hexagon {
+    @include summit-hexagon-generator($size: rem-calc(100px));
+    position: absolute;
+    top: rem-calc(-33px); // half true inner hexagon height + half of border width (8px)
+    left: 50%;
+    margin: 0 0 0 rem-calc(-50px);
+}
+
+.headline-innovate {
+    @extend %headline-summit;
+    border-top-color: $color-summit-innovate;
+    .summit-innovate {
+        @extend %headline-hexagon;
+    }
+}
+
+.headline-health {
+    @extend %headline-summit;
+    border-top-color: $color-summit-health;
+    .summit-health {
+        @extend %headline-hexagon;
+    }
+}
+
+.headline-money {
+    @extend %headline-summit;
+    border-top-color: $color-summit-money;
+    .summit-money {
+        @extend %headline-hexagon;
+    }
+}
+
+.headline-cities {
+    @extend %headline-summit;
+    border-top-color: $color-summit-cities;
+    .summit-cities {
+        @extend %headline-hexagon;
+    }
+}
+
+.headline-entertain {
+    @extend %headline-summit;
+    border-top-color: $color-summit-entertain;
+    .summit-entertain {
+        @extend %headline-hexagon;
+    }
+}
+
+.headline-smart {
+    @extend %headline-summit;
+    border-top-color: $color-summit-smart;
+    .summit-smart {
+        @extend %headline-hexagon;
+    }
+}

@@ -1,0 +1,84 @@
+/**
+ * View: Summits
+ */
+
+#view-experience-summits {
+    .view-header {
+        margin-bottom: -5rem;
+        padding: 1.5rem 0 5rem;
+    }
+    .section, .section-stripes {
+        position: static;
+        padding: 0 0 1rem;
+
+        .button {
+            display: block;
+            margin: 1rem auto 4rem;
+            width: 15rem;
+        }
+    }
+    .contain {
+        padding: 1rem 0;
+        max-width: rem-calc(750px);
+    }
+
+    // Sections with weird spacing so #hash links will position correctly
+    // without overlapping with fixed top header
+    #innovate, #health, #money, #cities, #entertain, #smart {
+        margin-top: -10rem;
+        padding-top: 10rem;
+
+        .highlighted-question {
+            text-transform: initial;
+            font-weight: bold;
+            font-size: rem-calc(21px);
+            color: $color-emerge-blue;
+            margin: 2rem auto 0 auto;
+            font-family: $body-font-family;
+            max-width: rem-calc(750px);
+        }
+    }
+}
+
+// Summit speakers
+.summit-speakers {
+    position: relative;
+    z-index: 2;
+    margin: 2rem 0 4rem;
+    .speakers-list {
+        padding: 2rem 0;
+        border-top: 1px solid lighten($color-indigo-blue, 30%);
+        @include block-grid($per_row: 6, $spacing: .5rem, $base_style: false);
+    }
+    .speaker-portrait {
+        @include hexagon($width: rem-calc(120px), $is_anchor: true);
+        opacity: .8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .summit-speakers-button {
+        top: rem-calc(-18px);
+        z-index: 1;
+        @include scut-center-absolutely(rem-calc(100px) n);
+    }
+}
+
+// Speaker tooltip styling for each summit
+.speaker-details-tooltip {
+    #summit-section-innovate &  { background: $color-summit-innovate }
+    #summit-section-health &    { background: $color-summit-health }
+    #summit-section-money &     { background: $color-summit-money }
+    #summit-section-cities &    { background: $color-summit-cities }
+    #summit-section-entertain & { background: $color-summit-entertain }
+    #summit-section-smart &     { background: $color-summit-smart }
+
+    &:after {
+        #summit-section-innovate &  { border-bottom-color: $color-summit-innovate }
+        #summit-section-health &    { border-bottom-color: $color-summit-health }
+        #summit-section-money &     { border-bottom-color: $color-summit-money }
+        #summit-section-cities &    { border-bottom-color: $color-summit-cities }
+        #summit-section-entertain & { border-bottom-color: $color-summit-entertain }
+        #summit-section-smart &     { border-bottom-color: $color-summit-smart }
+    }
+}

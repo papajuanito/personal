@@ -1,0 +1,45 @@
+/**
+ * View: Locations
+ */
+
+#view-locations {
+    .sideimage-hotel {
+        ul {
+            margin-left: 2rem;
+        }
+    }
+}
+.locations-list {
+    @extend %block-list;
+    li {
+        padding: 0 2rem;
+        width: auto;
+    }
+    strong {
+        color: $header-font-color;
+        font-size: rem-calc(18px);
+    }
+}
+#locations-hero {
+    height: 185px;
+    background: url("../img/bg-locations-hero.jpg") no-repeat center;
+}
+#locations {
+    padding: 0;
+
+    .contain {
+        text-align: center;
+    }
+    .address {
+        font-size: rem-calc(21px)
+    }
+    a[itemprop="map"] {
+        color: $header-font-color;
+        font-size: rem-calc(18px);
+        line-height: 2;
+        text-decoration: underline;
+    }
+    #map {
+        margin-top: 2rem;
+    }
+}

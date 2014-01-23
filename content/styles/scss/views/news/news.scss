@@ -1,0 +1,202 @@
+/**
+ * View: News
+ */
+
+#view-news {
+    .view-header {
+        max-width: 100%;
+        border-bottom: solid 1px #e4e4e4;
+
+        a { color: #3455a5; }
+    }
+
+    .content {
+        width: 70%;
+        padding-right: 0px;
+        border-right: none;
+    }
+
+    .category-header {
+        display: block;
+        position: relative;
+        margin-left: 1.1rem;
+        width: 94%;
+        height: 75px;
+
+        &.innovate { background: #ed145b; }
+        &.health { background: #68c39f; }
+        &.money { background: #f1c40f; }
+        &.cities { background: #8393a5; }
+        &.entertain { background: #fc7a30; }
+        &.smart { background: #00aeef; }
+
+        h3 {
+            color: #FFF;
+            padding: 19px 0px 0px 20px;
+        }
+
+        .category-icon {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 20px;
+            height: 34px;
+
+            &.innovate { background: transparent url(../img/news/innovation-header-icon.png) no-repeat; }
+        }
+    }
+
+    .all-news {
+        list-style: none;
+
+        li {
+            .news-post {
+                display: block;
+                padding: 30px 20px;
+                border-bottom: 1px solid #dce0e5;
+
+                &:hover {
+                    background: #f9f9f9;
+                }
+
+                .text-image {
+                    display: block;
+                    width: 280px;
+                    height: 280px;
+                    float: left;
+                    margin-right: 40px;
+                }
+
+                .photo-post {
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                h3 {
+                    text-transform: none;
+                    font-family: $body-font-family;
+                    font-weight: bold;
+                }
+
+                h5 { color: #8393a5; }
+                p { color: #5b6c7e; }
+            }
+
+            &:last-child a { border-bottom: none; }
+        }
+    }
+
+    .pagination {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: auto;
+
+            li {
+                a, a:link, a:active, a:visited {
+                    display: block;
+                    float: left;
+                    color: #8393a5;
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                    border-left: solid 1px #d7d9dc;
+                    background: #f6f6f6;
+
+                    &:hover, &.selected {
+                        color: #FFF;
+                        background: #8393a5;
+                    }
+                }
+
+                &:first-child a {
+                    border-left: none;
+                    border-radius: 5px 0px 0px 5px;
+                }
+
+                &:last-child a {
+                    color: #FFF;
+                    border-radius: 0px 5px 5px 0px;
+                    background: #2c58a7;
+                }
+            }
+        }
+    }
+
+    .sidenav {
+        width: 30%;
+        padding: rem-calc(0px 0px 0px 35px);
+        border-left: 1px solid #dce0e5;
+
+        .all-categories {
+            list-style: none;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: solid 1px #d7d9dc;
+
+            li {
+                a, a:active, a:link, a:visited {
+                    display: block;
+                    text-transform: uppercase;
+                    color: #2d58a7;
+                    font-size: rem-calc(20px);
+                    padding: rem-calc(20px 0 20px 0px);
+
+                    .category-icon {
+                        display: block;
+                        float: left;
+                        margin-right: 10px;
+                        margin-top: -8px;
+                        width: 50px;
+                        height: 53px;
+
+                        &.innovate { background: transparent url(http://static.tumblr.com/euo6y8b/GhOmz7d9g/innovate-icon.png) no-repeat; }
+                        &.health { background: transparent url(http://static.tumblr.com/euo6y8b/ph4mz7d9b/health-icon.png) no-repeat; }
+                        &.money { background: transparent url(http://static.tumblr.com/euo6y8b/l3wmz95qi/money-icon.png) no-repeat; }
+                        &.cities { background: transparent url(http://static.tumblr.com/euo6y8b/WNSmz7d91/cities-icon.png) no-repeat; }
+                        &.entertain { background: transparent url(http://static.tumblr.com/euo6y8b/bIsmz7d96/entertain-icon.png) no-repeat; }
+                        &.smart { background: transparent url(http://static.tumblr.com/euo6y8b/1IYmz95qp/smart-icon.png) no-repeat; }
+                    }
+                }
+            }
+        }
+
+        .twitter-feed {
+            margin: 0;
+            padding: 0;
+
+            .tweet {
+                position: relative;
+                padding: 30px;
+                margin-bottom: 25px;
+                background: #47d0ff;
+
+                &:first-child {
+                    margin-top: 20px;
+                }
+
+                p { color: #FFF; }
+                .user-fullname { margin: 0; }
+                .user-name { display: block; margin-bottom: rem-calc(10px); }
+
+                .timestamp {
+                    float: right;
+                    font-size: rem-calc(10px);
+                }
+
+                .tweet-icon {
+                    display: block;
+                    position: absolute;
+                    bottom: 14px;
+                    left: 30px;
+                    width: 26px;
+                    height: 23px;
+                    background: url(http://static.tumblr.com/euo6y8b/V0ymz8yqs/tweet-icon.png);
+                }
+            }
+        }
+    }
+}
+

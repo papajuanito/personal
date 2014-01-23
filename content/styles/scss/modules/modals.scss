@@ -1,0 +1,31 @@
+/**
+ * Modals
+ */
+
+.reveal-modal-bg {
+    @include reveal-bg;
+}
+
+.modal {
+    @extend %emerge-divider;
+    @include reveal-modal-base($width: 45%);
+    @include reveal-modal-style;
+
+    .button {
+        margin: 0 auto;
+    }
+}
+
+.modal-content {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.close-reveal-modal {
+    width: rem-calc(30px);
+    height: rem-calc(30px);
+    background: #f0f0f0;
+    text-align: center;
+    @include reveal-close;
+    line-height: rem-calc(30px);
+}

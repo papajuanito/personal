@@ -1,0 +1,171 @@
+//
+// Global Modules
+//
+
+// Helpers
+.contain, %row {
+    @include grid-row;
+}
+
+.disable-hover, .disable-hover * {
+    pointer-events: none !important;
+}
+
+// Logos
+.logo-emerge {
+    @include scut-image-replace;
+    @include scut-size(150px 56px);
+    display: block;
+    background: url("../svg/logo-emerge.svg");
+    background-size: 150px 56px;
+    &.is-vertical {
+        @include scut-size(122px 158px);
+        background: url("../svg/logo-emerge-vertical.svg");
+        background-size: 122px 158px;
+    }
+}
+
+// Gradient divider (header and footer, etc)
+%emerge-divider {
+    position: relative;
+    &:before {
+        @include linear-gradient(to right, #5195f3, #d34ad3);
+        @include scut-absolute;
+        @include scut-size(100% 3px);
+        content: "";
+    }
+}
+
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    display: block;
+    text-transform: uppercase;
+}
+
+.h1 { font-size: $h1-font-size }
+.h2 { font-size: $h2-font-size; letter-spacing: -0.1rem; }
+.h3 { font-size: $h3-font-size }
+.h4 { font-size: $h4-font-size }
+.h5 { font-size: $h5-font-size }
+.h6 { font-size: $h6-font-size }
+
+// Headings in Lato font family
+.is-Lato {
+    font-family: $body-font-family;
+    font-weight: bold;
+    text-transform: none;
+}
+
+//
+// Pages / Views
+//
+main {
+    padding-top: rem-calc(85px);
+}
+
+.view-header {
+    @extend %row;
+    padding: rem-calc(45px) 0;
+    text-align: center;
+    h1 {
+        margin: 0;
+        font-size: rem-calc(38px);
+    }
+    p {
+        margin: 0;
+        font-size: rem-calc(20px);
+    }
+}
+
+// Sections
+%section, .section {
+    position: relative;
+    z-index: 1;
+    padding: rem-calc(60px) 0;
+    background: $body-bg;
+
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        text-align: center;
+    }
+}
+
+.section-stripes {
+    @extend %section;
+    background: #f9f9f9 url("../img/bg-stripes.png");
+}
+
+// Block lists
+%block-list {
+    @extend %scut-list-unstyled;
+    @extend %row;
+    padding: 2rem 0;
+    text-align: center;
+
+    & > li {
+        display: inline-block;
+        margin: 0 -2px;
+        padding: 0 .5rem 1rem;
+        width: 33.33%;
+        vertical-align: top;
+    }
+}
+
+// Some generic layouts (columns)
+%content-module {
+    text-align: left;
+
+    h2, .h2 {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+}
+.content-primary {
+    @extend %content-module;
+    @include grid-column(7);
+
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        text-align: left;
+    }
+}
+.content-secondary {
+    @extend %content-module;
+    @include grid-column(5);
+    padding-left: 2rem;
+    border-left: 1px solid #bdc8d3;
+}
+
+// Side image icons (some content sections)
+%sideimage {
+    @extend %content-module;
+    padding-left: 30%;
+}
+
+.sideimage-hotel {
+    @extend %sideimage;
+    background: url("../svg/icon-hotel.svg") no-repeat 10% 50%;
+    background-size: 219px 167px;
+}
+
+
+// Locations map module
+#map {
+    background: #c2e6ff;
+    @include scut-ratio-box($ratio: 16/4, $inner: '#locations-map');
+    height: 454px;
+
+    .point_info {
+        h4 {
+            font-family: $body-font-family;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: none;
+        }
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+    .gm-style img {
+        max-width: none;
+    }
+}

@@ -1,0 +1,154 @@
+/**
+ * View: Exhibitions
+ */
+
+.btn-info-soon {
+    display: inline-block;
+    padding: .8rem;
+    border: 1px solid #a8b2bd;
+    border-radius: 5px;
+}
+
+#exhibitions-main {
+    ul {
+        @extend %block-list;
+    }
+    .h4 {
+        display: block;
+        padding-top: 1rem;
+        color: $color-emerge-blue;
+    }
+    .button {
+        display: block;
+        margin: 1rem auto 0;
+        width: 10rem;
+    }
+    .btn-info-soon {
+        margin-top: 1rem;
+    }
+}
+
+// Exhibition hexagons
+%exhibition-hexagon {
+    @include hexagon($width: rem-calc(200px), $is-solid: true);
+    .hexagon-text {
+        border: 0;
+        color: white;
+        font-size: rem-calc(50px);
+        font-weight: 100;
+        line-height: rem-calc(115px);
+        text-transform: uppercase;
+    }
+}
+.exhibition-hackathon {
+    @extend %exhibition-hexagon;
+    background-color: #b0cf5b;
+}
+.exhibition-challenge {
+    @extend %exhibition-hexagon;
+    background-color: #9b547d;
+}
+.exhibition-startup {
+    @extend %exhibition-hexagon;
+    background-color: #4d7d90;
+}
+
+
+#exhibitions-other {
+    text-align: center;
+
+    .block-list {
+        @extend %block-list;
+        @include grid-row;
+        li {
+            position: relative;
+            width: 25%;
+        }
+    }
+
+    strong {
+        display: block;
+        padding-top: 150px;
+        color: $color-emerge-blue;
+        font-size: rem-calc(18px);
+        text-align: center;
+    }
+}
+
+%exhibition-icon {
+    @extend %scut-image-replace;
+    position: relative;
+    display: block;
+    margin-left: -60px;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .9;
+    @include scut-size(120px 130px);
+    @include transition(opacity .3s ease);
+    @include scut-absolute(0 n n 50%);
+
+    &:after {
+        background: url("../img/bg-spotlights-other.png") no-repeat center;
+        content: '';
+        opacity: .6;
+        @include scut-absolute(0 0 0 0);
+        @include transition(opacity .3s ease);
+    }
+
+    .no-touch &:hover, &:focus {
+        opacity: 1;
+
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+.exhibition-gaming {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-gaming.svg");
+    background-size: 53px 42px;
+}
+.exhibition-nfte {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-nfte.svg");
+    background-size: 51px 40px;
+}
+.exhibition-stem {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-stemtech.svg");
+    background-size: 50px 49px;
+}
+.exhibition-smart_cities {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-smart_cities.svg");
+    background-size: 59px 36px;
+}
+.exhibition-lifestyle {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-lifestyle.svg");
+    background-size: 39px 40px;
+}
+.exhibition-employment {
+    @extend %exhibition-icon;
+    background-image: url("../svg/exhibitions/icon-employment.svg");
+    background-size: 31px 44px;
+}
+
+/**
+ * View: eMerge Americas Challenge view
+ */
+
+#view-challenge {
+    .content-secondary {
+        border: 0;
+    }
+    .hexagon {
+        @include hexagon($width: rem-calc(200px));
+    }
+}
+.judges-list { @extend .speakers-list; }
+.judge { @extend .speaker; }
+.judge-portrait { @extend %hexagon-fake; }
+.judge-details { @extend .speaker-details; }

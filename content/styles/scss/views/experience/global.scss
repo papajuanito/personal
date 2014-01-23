@@ -1,0 +1,46 @@
+/**
+ * View: eMerge Global
+ */
+
+#view-experience-global {
+    .view-header {
+        padding-bottom: 3rem;
+    }
+
+    .section, .section-stripes {
+        padding: 5rem 0;
+
+        .hexagon {
+            margin-left: rem-calc(-60px);
+            @include scut-absolute(rem-calc(-70px) n n 50%);
+        }
+    }
+
+    .hero-section {
+        padding-top: 0;
+
+        .hero-header {
+            @include scut-image-replace;
+            height: 185px;
+            background: #0c63c0 url("../img/img-global-hero.jpg") no-repeat;
+            background-position: center center;
+            margin-bottom: 3.5rem;
+        }
+
+    }
+
+    .hero-subsection {
+        padding: 0 0 5rem 0;
+
+        .hero-subheader {
+            @include scut-image-replace;
+            height: 185px;
+            background: url("../img/img-global-pavilion-hero.jpg");
+            background-position: center center;
+            margin-top: 0;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+
+}
