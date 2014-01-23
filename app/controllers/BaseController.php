@@ -7,11 +7,19 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
+
+	protected $data = array();
+
 	protected function setupLayout()
 	{
 		if ( ! is_null($this->layout))
 		{
-			$this->layout = View::make($this->layout);
+			$this->data['locale'] = 'en';
+			$this->data['environment'] = App::environment();
+
+			echo App::environment();
+
+			$this->layout = View::make($this->layout, $this->data);
 		}
 	}
 
