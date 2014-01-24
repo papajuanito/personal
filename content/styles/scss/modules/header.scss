@@ -3,6 +3,7 @@
 //
 
 #header {
+    position: relative;
     @extend %pattern;
     @include scut-fixed(0 0 n 0);
     z-index: 5;
@@ -12,10 +13,9 @@
 
     border-bottom: 2px solid $color-orange;
 
-    &.is-in-home {
-        background: transparent;
-        &.is-opaque {
-            // background: rgba($color-darkest-gray, 0.9);
+    &.is-transparent {
+        &:after{
+            opacity: 0.8;
         }
     }
 }

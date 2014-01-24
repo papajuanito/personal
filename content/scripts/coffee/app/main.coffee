@@ -5,9 +5,8 @@
  * If the same module is needed in two views, include the class instance multiple times
 ###
 define (require) ->
-    evnt = require('lib/evnt')
     $ = require('jquery')
-    # Index = require('app/index')
+    Index = require('app/index')
     require('reveal')
 
     # Map routes to their modules

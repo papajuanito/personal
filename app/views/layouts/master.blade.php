@@ -51,7 +51,8 @@
         {{--@include('partials/footer')--}}
 
         @if ($environment == 'production' || $environment == 'staging')
-        <script src="{{ asset('scripts/main.min.js') }}"></script>
+        <!--script src="{{ asset('scripts/main.min.js') }}"></script-->
+        <script data-main="{{ asset('scripts/js/config') }}" src="{{ asset('bower_components/requirejs/require.js') }}"></script>
         @else
         <script data-main="{{ asset('scripts/js/config') }}" src="{{ asset('bower_components/requirejs/require.js') }}"></script>
         @endif
