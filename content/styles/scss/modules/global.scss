@@ -2,6 +2,11 @@
 // Global Modules
 //
 
+
+%pattern{
+    background: url("../img/pattern.png") repeat;
+}
+
 // Helpers
 .contain, %row {
     @include grid-row;
@@ -39,7 +44,7 @@
 // Headings
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     display: block;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .h1 { font-size: $h1-font-size }

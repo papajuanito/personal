@@ -28,6 +28,8 @@
             @endif
         @show
 
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
         <meta property="og:type" content="website">
         @section('og-tags')
         <meta property="og:title" content="">
@@ -46,7 +48,7 @@
 
         @yield('content')
 
-        @include('partials/footer')
+        {{--@include('partials/footer')--}}
 
         @if ($environment == 'production' || $environment == 'staging')
         <script src="{{ asset('scripts/main.min.js') }}"></script>

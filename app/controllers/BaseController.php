@@ -16,9 +16,6 @@ class BaseController extends Controller {
 		{
 			$this->data['locale'] = 'en';
 			$this->data['environment'] = App::environment();
-
-			echo App::environment();
-
 			$this->layout = View::make($this->layout, $this->data);
 		}
 	}
