@@ -46,31 +46,12 @@ $hero-height: rem-calc(386px);
     }
     .content{
         @include grid-column($columns: 8);
+
+        background: url("../img/logo.png") 0px 0px no-repeat;
+        background-size: 90px;
+
         margin-top: 120px;
-        padding-left: 120px;
-
-        // .logo{
-        //     display: block;
-        //     width: 120px;
-        //     height: 110px;
-        // }
-    }
-}
-
-#hero-cta {
-    padding: 1rem 0;
-    background: rgba(255,255,255,.10);
-    border-top: 1px solid rgba(255,255,255,.25);
-    text-align: center;
-    @include scut-absolute(n 0 0 0);
-
-    span {
-        font-size: rem-calc(24px);
-        font-weight: bold;
-    }
-
-    .button {
-        margin: 0 0 0 2rem;
+        padding-left: 110px;
     }
 }
 
@@ -82,16 +63,19 @@ $hero-height: rem-calc(386px);
 
     height: rem-calc(300px);
 
-    h2{
-        padding-left: 55px;
-        padding-bottom: 10px;
-    }
     span{
         color: $color-orange;
     }
 
     p{
         font-family: 'Noto Sans', sans-serif;
+    }
+
+    &.with-icon{
+        h2{
+            padding-left: 55px;
+            padding-bottom: 10px;
+        }
     }
 }
 
@@ -100,41 +84,41 @@ $hero-height: rem-calc(386px);
     padding-right: 60px;
     padding-left: 0;
 
+
+}
+
+.contact{
+    h2{
+        background: url('../img/logo.png') 0px 0px no-repeat;
+        background-size: 40px 36px;
+    }
+}
+
+.development{
     h2{
         background: url('../img/monitor.png') 0px 5px no-repeat;
     }
 }
-
 .contain-right{
 
     padding-left: 60px;
     padding-right: 0;
+}
 
+.skills{
     h2{
         background: url('../img/skills.png') 0px 5px no-repeat;
     }
 }
-
-.home-summits-nav {
-    float: left;
-}
-
-.home-summits-content {
-    float: right;
-    text-align: left;
-    @include scut-vcenter-td(".content");
-    h2 {
-        text-align: left;
-    }
-}
-
 #home-overview{
 
 }
 
 #home-work{
-    height: 550px;
+    height: 500px;
     @extend %pattern;
+    -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .work-list{
@@ -149,6 +133,7 @@ $hero-height: rem-calc(386px);
     margin-right: 15px;
     margin-bottom: 15px;
     height: 180px;
+    cursor: pointer;
 
     position: relative;
     overflow: hidden;
@@ -200,7 +185,7 @@ $hero-height: rem-calc(386px);
         height: 0;
         background-color: $color-orange;
         border-radius: 200px;
-        transition: all 0.5s ease-out;
+        @include transition(all .4s ease);
     }
 
     &:hover .work-sum{
@@ -211,84 +196,3 @@ $hero-height: rem-calc(386px);
         border-radius: 200px;
     }
 }
-
-// The Experience
-#home-experience {
-    .h2 {
-        line-height: 1
-    }
-    p {
-        margin: 1rem 0 0;
-        font-size: rem-calc(18px);
-    }
-}
-
-// In-page banner
-#home-experience-subhero {
-    height: 350px;
-    background: url("../img/img-home-subhero.jpg") center top;
-    background-size: cover;
-
-    &:after {
-        background: url("../img/img-home-subhero-logo.png");
-        content: '';
-        @include scut-center-absolutely(96px 108px);
-    }
-}
-
-// Location map
-#view-home #map {
-    .map-description {
-        margin-left: rem-calc(-475px);
-        z-index: 1;
-        @include scut-absolute(3rem n n 50%);
-        p {
-            margin: 0;
-            font-size: rem-calc(18px);
-        }
-    }
-}
-
-// Exhibitions
-// #home-exhibitions {
-//     h2 {
-//         margin-bottom: 2rem;
-//     }
-//     li {
-//         position: relative;
-//         padding-top: 9rem;
-//         padding-bottom: 0;
-//         text-align: center;
-//     }
-//     a {
-//         @include scut-absolute(0 rem-calc(13px) n rem-calc(13px));
-//     }
-//     p {
-//         margin: 0;
-//         font-size: rem-calc(15px);
-//     }
-// }
-
-// Quotes grid
-#home-quotes {
-    position: relative;
-    overflow: hidden;
-
-    header {
-        z-index: 1;
-        padding: 1rem 0 2rem;
-        text-align: center;
-        @include scut-absolute(0 0 n 0);
-        @include background(linear-gradient(white 50%, rgba(255, 255, 255, 0) 100%));
-
-        h2 {
-            margin: 1rem 0;
-            font-size: rem-calc(42px);
-        }
-    }
-
-    .quotes-grid {
-        margin: 0 -10rem -5.5rem;
-    }
-}
-
