@@ -3,6 +3,13 @@
 @section('content')
 <main id="view-home" role="main">
     <header id="home-hero">
+        <div class="contain">
+            <div class="content">
+                <!-- <a href="#" class="logo">Javier Velazquez</a> -->
+                <h1>[ <span>javier</span>] Velázquez</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis tincidunt mauris, sed accumsan mauris porta nec. Nulla nibh sapien, facilisis ut sapien eu</p>
+            </div>
+        </div>
     </header>
     <section id="home-overview" class="section">
         <div class="contain">
@@ -21,7 +28,44 @@
     <section id="home-work" class="section">
         <div class="contain">
             <h2 class="h2">mndhjas</h2>
-            <p>lkjdfskldjfdsf</p>
+            <ul class="work-list">
+                <li class="work-item big">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item medium">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item small last">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item small">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item medium">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item big last">
+                    <div class="circle">
+                        <div class="work-sum">
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <section id="home-contact" class="section">

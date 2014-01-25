@@ -21,6 +21,11 @@
     @include grid-row;
 }
 
+.logo {
+    background: url("../img/logo.png") no-repeat;
+    background-size: cover;
+}
+
 .disable-hover, .disable-hover * {
     pointer-events: none !important;
 }

@@ -15,7 +15,7 @@ define (require) ->
             $hero = $("#home-hero")
 
             fixedHeader = ->
-                if $window.scrollTop() > 10
+                if $window.scrollTop() > $hero.innerHeight() - $header.innerHeight()
                     $header.addClass('is-transparent')
                 else
                     $header.removeClass('is-transparent')

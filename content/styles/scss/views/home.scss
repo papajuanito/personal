@@ -2,39 +2,58 @@
 // View: Home
 //
 
-$hero-height: rem-calc(300px);
+$hero-height: rem-calc(386px);
 
 #view-home {
     padding-top: $hero-height;
 }
 
 #home-hero {
-    padding-top: 7em;
+    padding-top: 4em;
     height: $hero-height;
-    background: #c3c3c3 url("../img/bg-home-hero.jpg") center;
+    background: #c3c3c3 url("../img/bg-home-hero.jpg") 0px 60px;
     background-size: cover;
     -webkit-box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.2);
     box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.2);
     color: white;
-    text-align: center;
+    // text-align: center;
     @include scut-fixed(0 0 n 0);
+
+    color: $color-extra-orange;
+
     h1 {
         margin: 0;
-        margin-top: 100px;
-        color: white;
-        font-size: em-calc(60px);
+        font-size: em-calc(42px);
+        color: $color-extra-orange;
         font-weight: 300;
-        text-transform: uppercase;
         b {
             font-weight: 500;
+        }
+
+        span{
+            color: $color-extra-dark-fonts;
         }
     }
     p {
         margin: 0;
-        font-size: em-calc(20px);
+        font-size: em-calc(16px);
+        font-family: 'Noto Sans', sans-serif;
+        text-shadow: 0 1px 1px #000;
         span {
             display: block;
         }
+
+    }
+    .content{
+        @include grid-column($columns: 8);
+        margin-top: 120px;
+        padding-left: 120px;
+
+        // .logo{
+        //     display: block;
+        //     width: 120px;
+        //     height: 110px;
+        // }
     }
 }
 
@@ -58,16 +77,42 @@ $hero-height: rem-calc(300px);
 
 // Summits section
 .contain-left, .contain-right {
+
     @include grid-column($columns: 6);
+
     height: rem-calc(300px);
-    padding: 0 20px;
+
+    h2{
+        padding-left: 55px;
+        padding-bottom: 10px;
+    }
     span{
         color: $color-orange;
+    }
+
+    p{
+        font-family: 'Noto Sans', sans-serif;
     }
 }
 
 .contain-left{
     border-right: 1px solid $color-orange;
+    padding-right: 60px;
+    padding-left: 0;
+
+    h2{
+        background: url('../img/monitor.png') 0px 5px no-repeat;
+    }
+}
+
+.contain-right{
+
+    padding-left: 60px;
+    padding-right: 0;
+
+    h2{
+        background: url('../img/skills.png') 0px 5px no-repeat;
+    }
 }
 
 .home-summits-nav {
@@ -88,10 +133,84 @@ $hero-height: rem-calc(300px);
 }
 
 #home-work{
-    height: 500px;
+    height: 550px;
     @extend %pattern;
 }
 
+.work-list{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.work-item{
+    border: 3px solid $color-extra-dark-fonts;
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    height: 180px;
+
+    position: relative;
+    overflow: hidden;
+
+    -webkit-box-shadow:inset 0 0 10px 5px rgba(0,0,0,0.6);
+    box-shadow:inset 0 0 10px 5px rgba(0,0,0,0.6);
+
+    float: left;
+
+    &.big{
+        width: 430px;
+        background: url(../img/big.jpg);
+        background-size: cover;
+    }
+
+    &.medium{
+        width: 290px;
+        background: url(../img/medium.jpg);
+        background-size: cover;
+    }
+
+    &.small{
+        width: 250px;
+        background: url(../img/small.jpg);
+        background-size: cover;
+    }
+
+    &.last{
+        margin-right: 0;
+    }
+
+    .circle{
+        position: absolute;
+        height: 500px;
+        width: 400px;
+        top: 50%;
+        margin-top: -250px;
+        width: 500px;
+        left: 50%;
+        margin-left: -250px;
+        border-radius: 400px;
+    }
+
+    .work-sum{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: $color-orange;
+        border-radius: 200px;
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover .work-sum{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 200px;
+    }
+}
 
 // The Experience
 #home-experience {

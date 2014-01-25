@@ -29,6 +29,7 @@
         @show
 
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
         <meta property="og:type" content="website">
         @section('og-tags')
