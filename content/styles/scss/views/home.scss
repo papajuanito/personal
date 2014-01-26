@@ -11,7 +11,7 @@ $hero-height: rem-calc(386px);
 #home-hero {
     padding-top: 4em;
     height: $hero-height;
-    background: #c3c3c3 url("../img/bg-home-hero.jpg") 0px 60px;
+    background: #c3c3c3 url("../img/bg-home-hero.jpg") center;
     background-size: cover;
     -webkit-box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.2);
     box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.2);
@@ -21,37 +21,42 @@ $hero-height: rem-calc(386px);
 
     color: $color-extra-orange;
 
-    h1 {
-        margin: 0;
-        font-size: em-calc(42px);
-        color: $color-extra-orange;
-        font-weight: 300;
-        b {
-            font-weight: 500;
-        }
+    font-family: 'Noto Sans', sans-serif;
 
-        span{
-            color: $color-extra-dark-fonts;
-        }
+    img{
+        margin-top: 120px;
+        width: 75px;
+        float: left;
     }
-    p {
-        margin: 0;
-        font-size: em-calc(16px);
-        font-family: 'Noto Sans', sans-serif;
-        text-shadow: 0 1px 1px #000;
-        span {
-            display: block;
-        }
 
-    }
     .content{
-        @include grid-column($columns: 8);
-
-        background: url("../img/logo.png") 0px 0px no-repeat;
-        background-size: 90px;
+        @include grid-column($columns: 7);
 
         margin-top: 120px;
-        padding-left: 110px;
+        padding-left: 20px;
+
+        h1 {
+            margin: 0;
+            font-size: em-calc(46px);
+            color: $color-extra-orange;
+
+            letter-spacing: -1px;
+
+            span{
+                font-weight: bold;
+                color: $color-extra-dark-fonts;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: em-calc(14px);
+            text-shadow: 0 1px 0px rgba(0,0,0,0.4);
+            width: 300px;
+            padding-left: 0px;
+
+        }
+
     }
 }
 
@@ -63,16 +68,18 @@ $hero-height: rem-calc(386px);
 
     height: rem-calc(300px);
 
+    font-family: 'Noto Sans', sans-serif;
+
     span{
+        font-weight: bold;
         color: $color-orange;
     }
 
-    p{
-        font-family: 'Noto Sans', sans-serif;
-    }
 
     &.with-icon{
         h2{
+
+            letter-spacing: -1px;
             padding-left: 55px;
             padding-bottom: 10px;
         }
@@ -121,10 +128,101 @@ $hero-height: rem-calc(386px);
     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.work-list{
+.work-list, .skills-list, .profile-links{
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
+
+    li{
+        display: inline-block;
+    }
+}
+
+.profile-links{
+
+    li {
+
+        margin-right: 25px;
+
+        a{
+            display: block;
+            width: 74px;
+            height: 74px;
+            border: 4px solid $color-dark-fonts;
+            border-radius: 40px;
+
+            &:hover{
+                -webkit-box-shadow:inset 0 0 1px 2px $color-orange;
+                box-shadow:inset 0 0 1px 2px $color-orange;
+            }
+
+            &.resume{
+                background: url('../img/resume-logo.png') center no-repeat;
+
+                &:hover{
+                    background: url('../img/resume-logo-hover.png') center no-repeat;
+                }
+            }
+
+            &.github{
+                background: url('../img/github-logo.png') center no-repeat;
+                // background-size: 28px 31px;
+
+                &:hover{
+                    background: url('../img/github-logo-hover.png') center no-repeat;
+                }
+
+            }
+
+            &.codeeval{
+                background: url('../img/codeeval-logo.png') center no-repeat;
+
+                &:hover{
+                    background: url('../img/codeeval-logo-hover.png') center no-repeat;
+                }
+            }
+        }
+    }
+
+}
+
+.skills-list{
+
+    margin-left: 5px;
+    margin-bottom: 30px;
+
+    li{
+        position: relative;
+        padding: 0 2px;
+        margin-right: 15px;
+
+        &:before, &:after{
+            position: absolute;
+            top: 0;
+            height: 0;
+            width: 0;
+            margin-top: -3px;
+            font-weight: bold;
+            font-size: 18px;
+            color: $color-orange;
+            pointer-events: none;
+        }
+
+        &:before {
+            left: 0;
+            margin-left: -5px;
+            content: '[';
+        }
+
+        &:after {
+            right: 0;
+            content: ']';
+        }
+    }
+}
+
+.big{
+    width: 430px;
 }
 
 .work-item{
@@ -133,7 +231,8 @@ $hero-height: rem-calc(386px);
     margin-right: 15px;
     margin-bottom: 15px;
     height: 180px;
-    cursor: pointer;
+
+    font-family: 'Noto Sans', sans-serif;
 
     position: relative;
     overflow: hidden;
@@ -144,7 +243,7 @@ $hero-height: rem-calc(386px);
     float: left;
 
     &.big{
-        width: 430px;
+        // width: 430px;
         background: url(../img/big.jpg);
         background-size: cover;
     }
@@ -168,7 +267,6 @@ $hero-height: rem-calc(386px);
     .circle{
         position: absolute;
         height: 500px;
-        width: 400px;
         top: 50%;
         margin-top: -250px;
         width: 500px;
@@ -186,6 +284,72 @@ $hero-height: rem-calc(386px);
         background-color: $color-orange;
         border-radius: 200px;
         @include transition(all .4s ease);
+
+        .content{
+            color: $color-extra-dark-fonts;
+            position: absolute;
+            opacity: 0;
+            left: 50%;
+            margin-left: -215px;
+            top: 50%;
+            height: 180px;
+            margin-top: -90px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 40px 0;
+            font-weight: bold;
+
+            @include transition(all 1s ease);
+
+            p{
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+            b{
+                position: relative;
+                font-size: 20px;
+
+                padding: 0 3px;
+
+                &:before, &:after{
+                    position: absolute;
+                    top: 0;
+                    height: 0;
+                    width: 0;
+                    // margin-top: -2px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #fff;
+                    pointer-events: none;
+                    font-weight: normal;
+                }
+
+                &:before {
+                    left: 0;
+                    margin-left: -5px;
+                    content: '[';
+                }
+
+                &:after {
+                    right: 0;
+                    margin-right: -5px;
+                    content: ']';
+                }
+            }
+
+            a{
+                font-size: 12px;
+                color: $color-extra-dark-fonts;
+                text-transform: uppercase;
+                border: 2px solid $color-extra-dark-fonts;
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    &:hover .work-sum .content{
+        opacity: 1;
     }
 
     &:hover .work-sum{
