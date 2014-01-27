@@ -13,14 +13,14 @@
     </header>
     <section id="home-overview" class="section">
         <div class="contain">
-            <div class="contain-left development with-icon">
+            <div class="contain-left development ">
                 <div class="content">
-                    <h2>[<span>web</span>] development</h2>
+                    <h2 class="with-icon">[<span>web</span>] development</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis orci sit amet mi imperdiet porta. Nullam vitae egestas nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies leo ut nibh pellentesque, venenatis aliquet justo vehicula. Nulla rhoncus tortor vitae convallis fermentum. Cr</p>
                 </div>
             </div>
-            <div class="contain-right skills with-icon">
-                <h2>[<span>skills</span>] languages & tools</h2>
+            <div class="contain-right skills">
+                <h2 class="with-icon">[<span>skills</span>] languages & tools</h2>
                 <ul class="skills-list">
                     <li>HTML/HTML5</li>
                     <li>CSS/CSS3</li>
@@ -59,7 +59,9 @@
         </div>
     </section>
     <section id="home-work" class="section">
-        <div class="contain">
+        <div class="contain work">
+            <h2 class="with-icon">[<span>work</span>] Sites & apps</h2>
+            <a class="all-work" href="#">view all projects</a>
             <ul class="work-list">
                 <li class="work-item big">
                     <div class="circle">
@@ -132,9 +134,9 @@
     </section>
     <section id="home-contact" class="section">
         <div class="contain">
-            <div class="contain-left contact with-icon">
+            <div class="contain-left contact">
                 <div class="content">
-                    <h2>[<span>contact</span>] Get in touch</h2>
+                    <h2 class="with-icon">[<span>contact</span>] Get in touch</h2>
                 </div>
             </div>
             <div class="contain-right">

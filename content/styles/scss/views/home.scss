@@ -76,14 +76,13 @@ $hero-height: rem-calc(386px);
     }
 
 
-    &.with-icon{
-        h2{
 
-            letter-spacing: -1px;
-            padding-left: 55px;
-            padding-bottom: 10px;
-        }
-    }
+}
+
+.with-icon{
+        letter-spacing: -1px;
+        padding-left: 55px;
+        padding-bottom: 10px;
 }
 
 .contain-left{
@@ -106,8 +105,48 @@ $hero-height: rem-calc(386px);
         background: url('../img/monitor.png') 0px 5px no-repeat;
     }
 }
-.contain-right{
 
+.work{
+    h2{
+        // padding-left: 75px;
+        background: url('../img/work-window.png') 0 3px no-repeat;
+        padding-bottom: 20px;
+        display: inline-block;
+    }
+
+    .all-work{
+        float: right;
+        padding: 15px 10px;
+        margin-right: 10px;
+        color: #f6f4f1;
+        position: relative;
+
+        &:before, &:after{
+            position: absolute;
+            top: 10;
+            height: 0;
+            width: 0;
+            // margin-top: -2px;
+            font-weight: bold;
+            font-size: 18px;
+            color: $color-orange;
+            pointer-events: none;
+            font-weight: normal;
+        }
+
+        &:before {
+            left: 0;
+            content: '[';
+        }
+
+        &:after {
+            right: 0;
+            content: ']';
+        }
+    }
+}
+
+.contain-right{
     padding-left: 60px;
     padding-right: 0;
 }
@@ -122,10 +161,21 @@ $hero-height: rem-calc(386px);
 }
 
 #home-work{
-    height: 500px;
+    height: 515px;
+    padding: rem-calc(30px) 0 rem-calc(60px);
     @extend %pattern;
     -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+    h2{
+        font-weight: normal;
+        span{
+            font-weight: bold;
+            color: $color-orange;
+        }
+
+        color: #f6f4f1;
+    }
 }
 
 .work-list, .skills-list, .profile-links{
@@ -360,3 +410,12 @@ $hero-height: rem-calc(386px);
         border-radius: 200px;
     }
 }
+
+
+#home-contact{
+    -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+

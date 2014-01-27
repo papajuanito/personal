@@ -49,7 +49,7 @@
 
         @yield('content')
 
-        {{--@include('partials/footer')--}}
+        @include('partials/footer')
 
         @if ($environment == 'production' || $environment == 'staging')
         <!--script src="{{ asset('scripts/main.min.js') }}"></script-->
