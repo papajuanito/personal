@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/',  array('as' => 'index', 'uses' => 'HomeController@showIndex'));
+Route::get('/',  array('as' => 'index', 'uses' => 'AppController@showIndex'));
+
+Route::get('work',  array('as' => 'work', 'uses' => 'AppController@showWork'));

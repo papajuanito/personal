@@ -4,12 +4,12 @@
     <div class="contain">
         <nav id="navigation" role="navigation">
             <ul>
-                <li>
-                    <a {{ $route == 'index' ? ' class="is-active"' : '' }} href="#">work</a>
-                <li>
-                <li class="has-dropdown">
-                    <a href="#"{{ $route == 'about' ? ' class="is-active"' : '' }}>about</a>
+                <li >
+                    <a {{ $route == 'index' ? ' class="is-active"' : '' }} href="{{ URL::to('/') }}">about</a>
                 </li>
+                <li>
+                    <a {{ $route == 'work' ? ' class="is-active"' : '' }} href="{{ URL::to('work') }}">work</a>
+                <li>
                 <li>
                     <a href=""{{ $route == 'contact' ? ' class="is-active"' : '' }}>contact</a>
                 </li>
