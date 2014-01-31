@@ -18,6 +18,10 @@
             opacity: 0.8;
         }
     }
+
+    @media #{$mobile} {
+        padding: rem-calc(5px 0 7px);
+    }
 }
 
 #navigation {
@@ -65,5 +69,11 @@
             right: 0;
             content: ']';
         }
+    }
+
+    @media #{$mobile} {
+        float: none;
+        margin-right: 0;
+        text-align: center;
     }
 }

@@ -22,12 +22,21 @@ class AppController extends BaseController {
 		$this->layout->content = View::make('index', $this->data);
 	}
 
-	public function showWork(){
-		$this->layout->content = View::make('work', $this->data);
+	public function showWork($projectId = null){
+
+		if($projectId){
+			$this->data['project'] = Project::where('string', '=', $projectId)->first();
+
+			if($this->data['project']->count())
+				$this->layout->content = View::make('work-single', $this->data);
+			else
+				$this->layout->content = View::make('work', $this->data);
+		}else
+			$this->layout->content = View::make('work', $this->data);
 	}
 
 	public function showSingleWork(){
-		$this->layout->content = View::make('work-single', $this->data);
+
 	}
 
 }

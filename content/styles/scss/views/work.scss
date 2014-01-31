@@ -10,7 +10,7 @@
 
 .work-left{
 
-    padding: 75px 0;
+    padding: 25px 0;
     @include grid-column($columns: 4);
 
     h2{
@@ -21,30 +21,64 @@
         font-size: rem-calc(24px);
     }
 
-    ul, p, h2{
+    ul, h2{
         text-align: left;
     }
 
+     p{
+        text-align: justify;
+     }
+
     font-size: rem-calc(14px);
     font-family: 'Noto Sans', sans-serif;
-}
 
-.work-logo{
-    margin-bottom: 40px;
+    @media #{$mobile} {
+        @include grid-column($columns: 12);
+        padding: 45px 15px 20px;
+        border-bottom: 1px solid $color-orange;
+
+        ul, h2, p{
+            text-align: center;
+        }
+    }
 }
 
 .work-right{
     padding: 95px 0;
     background-color: white;
     border-left: 1px solid #e3e4e4;
+    border-right: 1px solid #e3e4e4;
 
     @include grid-column($columns: 8);
+
+    @media #{$mobile} {
+        @include grid-column($columns: 12);
+        padding: 55px 15px 20px;
+        border-bottom: 1px solid $color-orange;
+
+        ul, h2, p{
+            text-align: center;
+        }
+    }
 }
 
 #view-work{
     padding: 120px 0;
 
     h2{
+
+        b{
+            color: $color-orange;
+        }
+
         padding-bottom: 35px;
+    }
+
+    @media #{$mobile} {
+        padding: 90px 15px 20px;
+
+        h2{
+            padding-bottom: 15px;
+        }
     }
 }

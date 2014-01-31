@@ -8,10 +8,10 @@
                     <a {{ $route == 'index' ? ' class="is-active"' : '' }} href="{{ URL::to('/') }}">about</a>
                 </li>
                 <li>
-                    <a {{ $route == 'work' ? ' class="is-active"' : '' }} href="{{ URL::to('work') }}">work</a>
+                    <a {{ $route == 'work' || $route == 'work-single' ? ' class="is-active"' : '' }} href="{{ URL::to('work') }}">work</a>
+                </li>
                 <li>
-                <li>
-                    <a href=""{{ $route == 'contact' ? ' class="is-active"' : '' }}>contact</a>
+                    <a href="#home-contact" {{ $route == 'contact' ? ' class="is-active"' : '' }}>contact</a>
                 </li>
             </ul>
         </nav>
