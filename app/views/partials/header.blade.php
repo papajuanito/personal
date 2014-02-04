@@ -11,7 +11,7 @@
                     <a {{ $route == 'work' || $route == 'work-single' ? ' class="is-active"' : '' }} href="{{ URL::to('work') }}">work</a>
                 </li>
                 <li>
-                    <a href="#home-contact" {{ $route == 'contact' ? ' class="is-active"' : '' }}>contact</a>
+                    <a href="{{ URL::to('/') }}#home-contact" {{ $route == 'contact' ? ' class="is-active"' : '' }}>contact</a>
                 </li>
             </ul>
         </nav>

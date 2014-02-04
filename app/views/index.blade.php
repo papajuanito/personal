@@ -3,8 +3,9 @@
 @section('content')
 <main id="view-home" role="main">
     <header id="home-hero">
+        <!--img class="gallery-img" src="{{asset('img/header/header-1.jpg')}}"-->
         <div class="contain">
-            <img src="{{ asset('img/logo.png') }}">
+            <img class="home-logo" src="{{ asset('img/logo.png') }}">
             <div class="content">
                 <h1>[<span>javier</span>]Velázquez</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat, quam sed pharetra tincidunt.</p>
@@ -55,7 +56,7 @@
                 <ul class="profile-links">
                     <li><a href="{{ asset('files/resume.pdf') }}" alt="resume" target="_blank" class="resume"></a></li>
                     <li><a href="https://github.com/papajuanito" target="_blank" alt="github" class="github"></a></li>
-                    <li class="last"><a href="http://codeeval.com" alt="codeeval" target="_blank" class="codeeval"></a></li>
+                    <li class="last"><a href="https://www.codeeval.com/public/6b52b8cb9a816f667cf958d75b33405713269d47" alt="codeeval" target="_blank" class="codeeval"></a></li>
                 </ul>
             </div>
         </div>
