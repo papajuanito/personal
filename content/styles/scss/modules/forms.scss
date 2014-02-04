@@ -3,64 +3,31 @@
  */
 
 #{$all-text-inputs}, textarea {
-    border-radius: 3px;
+    // border-radius: 3px;
     @include form-element;
 }
 
-textarea {
-    min-height: rem-calc(100px);
-    resize: vertical;
+input[type="text"], textarea {
+    border: 1px solid $color-dark-fonts;
+    color: $color-dark-fonts;
+    position: relative;
+
+    &::-webkit-input-placeholder { color: $color-dark-fonts; }
+    &:-moz-placeholder { color: $color-dark-fonts; }
+    &::-moz-placeholder { color: $color-dark-fonts; }
+    &:-ms-input-placeholder { color: $color-dark-fonts; }
 }
 
-input:focus, textarea:focus {
+input[type="text"]:focus, textarea:focus {
+    -webkit-box-shadow:inset 0 0 0 2px #fa3c27;
+    box-shadow:inset 0 0 0 2px #fa3c27;
     &::-webkit-input-placeholder { color: transparent; }
     &:-moz-placeholder { color: transparent; }
     &::-moz-placeholder { color: transparent; }
     &:-ms-input-placeholder { color: transparent; }
 }
 
-// Mayoral Innovation Summit - Password access form
-.mayoral-form {
-    margin: 3.5rem auto 2rem auto;
-    max-width: rem-calc(800px);
-    background: #3e4a56;
-    border: 1px solid $input-border-color;
-    text-align: left;
-    fieldset {
-        position: relative;
-        margin: 2.5rem;
-        padding: 0;
-        border: 0;
-    }
-    legend {
-        margin: 0 0 2rem;
-        color: white;
-        font-size: rem-calc(20px);
-        font-weight: bold;
-    }
-    input[type="password"], input[type="text"], .button {
-        float: left;
-    }
-    input[type="password"], {
-        margin: 0 5% 0 0;
-        width: 32%;
-        font-size: rem-calc(18px);
-    }
-    input[type="text"], {
-        margin: 0 5% 0 0;
-        width: 32%;
-        font-size: rem-calc(18px);
-    }
-    .button {
-        margin: 0;
-        padding: .75rem 0;
-        width: 25%;
-    }
-    .mayoral-request {
-        display: none;
-        color: $color-indigo-blue;
-        font-size: rem-calc(14px);
-        text-decoration: underline;
-        @include scut-absolute(.5rem 0 n n);
-    }
+textarea {
+    min-height: rem-calc(100px);
+    resize: vertical;
 }

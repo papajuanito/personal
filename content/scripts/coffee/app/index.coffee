@@ -12,8 +12,38 @@ define (require) ->
         events: ->
             $window = $(window)
             $header = $('#header')
+            $assets = $('body').data('assets')
             $hero = $("#home-hero")
-            $current = 1;
+            $current = 1
+            $images = []
+
+            preload = ->
+                i = 0
+                while i < preload.arguments.length
+                    $images[i] = new Image()
+                    $images[i].src = preload.arguments[i]
+                    i++
+
+                galleryInterval = setInterval( ->
+                    if($current <= 3)
+                        $current++
+                    else
+                        $current = 1;
+
+                    $hero.css(
+                        background: "url('../img/header/header-" + $current +  ".jpg') center 40px no-repeat";
+                        "background-size": "cover";
+                    )
+                , 4000)
+
+
+            if(!$hero.hasClass('mobile'))
+                console.log($hero.hasClass('mobile'))
+                preload(
+                    $assets + 'img/header/header-2.jpg',
+                    $assets + 'img/header/header-3.jpg',
+                    $assets + 'img/header/header-4.jpg',
+                )
 
             fixedHeader = ->
                 if $window.scrollTop() > $hero.innerHeight() - $header.innerHeight()
@@ -24,12 +54,3 @@ define (require) ->
             $window.on 'scroll.home', (e) =>
                 window.requestAnimationFrame(fixedHeader)
 
-
-            galleryCallback =  ->
-                $current++
-                $hero.css(
-                    background: "#c3c3c3 url('../img/header/header-" + $current +  ".jpg') center 40px no-repeat";
-                    "background-size": "cover";
-                )
-
-            gallery = setInterval galleryCallback($hero), 2000

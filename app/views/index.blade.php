@@ -2,13 +2,13 @@
 
 @section('content')
 <main id="view-home" role="main">
-    <header id="home-hero">
+    <header id="home-hero" {{(Agent::isMobile()) ? "class=mobile" : ""}}>
         <!--img class="gallery-img" src="{{asset('img/header/header-1.jpg')}}"-->
         <div class="contain">
-            <img class="home-logo" src="{{ asset('img/logo.png') }}">
+            <img src="{{ asset('img/logo.png') }}">
             <div class="content">
                 <h1>[<span>javier</span>]Velázquez</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat, quam sed pharetra tincidunt.</p>
+                <p>Just a back-end, nay, and all around web aficionado.</p>
             </div>
         </div>
     </header>
@@ -18,7 +18,7 @@
                 <div class="content">
                     <img src="{{ asset('img/monitor.png') }}" />
                     <h2>[<span>web</span>] development</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis orci sit amet mi imperdiet porta. Nullam vitae egestas nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies leo ut nibh pellentesque, venenatis aliquet justo vehicula. Nulla rhoncus tortor vitae convallis fermentum. Cr</p>
+                    <p>Over 3 years of experience developing websites and applications using HTML, PHP and JavaScript programming. Knowledge of data and events tracking. Capable of working with minor supervision or direction as well as the ability to work as a team. Able to learn and implement new technologies. Hard working and detailed oriented. Written and verbal proficiency in English and Spanish. <b>But also, also look at that hair.</b></p>
                 </div>
             </div>
             <div class="contain-right skills with-icon">
@@ -68,70 +68,22 @@
             @if(Agent::isMobile())
                 <ul class="work-list">
                     <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>playstation</b>
-                                    <p>Nación Play</p>
-                                    <a href="{{ URL::to('work/nacion-play') }}">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ URL::to('work/nacion-play') }}"></a>
                     </li>
-                    <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-emerge.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>lexus</b>
-                                    <p>Car Model Configurator</p>
-                                    <a href="{{ URL::to('work/emerge') }}">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="work-item medium open-mobile">
+                        <a href="{{ URL::to('work/emerge') }}"></a>
                     </li>
                     <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-herbal.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>copa airlines</b>
-                                    <p>Descubre Panama con Copa</p>
-                                    <a href="#">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ URL::to('work/herbal-essences') }}"></a>
                     </li>
                     <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-lexus.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>playstation</b>
-                                    <p>Nación Play</p>
-                                    <a href="#">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ URL::to('work/lexus') }}"></a>
                     </li>
                     <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-destinations.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>lexus</b>
-                                    <p>Car Model Configurator</p>
-                                    <a href="#">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ URL::to('work/destinations-guide') }}"></a>
                     </li>
-                    <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-heart.png')}} ); background-size: cover; background-position: center;">
-                        <div class="circle">
-                            <div class="work-sum">
-                                <div class="content big">
-                                    <b>copa airlines</b>
-                                    <p>Descubre Panama con Copa</p>
-                                    <a href="#">View Project</a>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="work-item small last open-mobile">
+                        <a href="{{ URL::to('work/memorial-heart') }}"></a>
                     </li>
                 </ul>
                 <a class="all-work" href="{{ URL::to('work') }}">view all projects</a>
@@ -211,13 +163,24 @@
     <section id="home-contact" class="section">
         <div class="contain">
             <div class="contain-left contact">
-                <div class="content">
-                    <h2 class="with-icon">[<span>contact</span>] Get in touch</h2>
+                <div class="content with-icon">
+                    <img src="{{ asset('img/logo.png') }}" />
+                    <h2>[<span>contact</span>] Get in touch</h2>
+                    {{ Form::open(array('/' => 'foo/bar')) }}
+                        <input name="who" type="text" placeholder="who are you?">
+                        <input name="email" type="text" placeholder="what's your email?">
+                        <textarea name="what" cols="50" rows="10" placeholder="what do you want?"></textarea>
+                    {{ Form::close() }}
                 </div>
             </div>
-            <div class="contain-right">
+            <div class="contain-right in-touch">
                 <h2>[<span>javier</span>] Velázquez</h2>
-
+                <ul class="contact-list">
+                    <li><b>[E]</b>javh.accs@gmail.com</li>
+                    <li><b>[T]</b>786-201-8898</li>
+                    <li><b>[S]</b>papajuanito</li>
+                    <li><b>[L]</b>/in/javelazquez/</li>
+                </ul>
             </div>
         </div>
     </section>

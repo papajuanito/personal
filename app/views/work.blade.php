@@ -8,15 +8,7 @@
         <ul class="work-list">
             @if(Agent::isMobile())
                 <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>playstation</b>
-                                <p>Nación Play</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/nacion-play') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-emerge.png')}} ); background-size: cover; background-position: center;">
                     <div class="circle">
