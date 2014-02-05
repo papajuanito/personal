@@ -7,15 +7,38 @@
     @include form-element;
 }
 
+.with-icon {
+
+    label img{
+        height: 52px;
+        width: 52px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    @media #{$mobile} {
+        label {
+            display: none;
+        }
+    }
+}
+
 input[type="text"], textarea {
     border: 1px solid $color-dark-fonts;
     color: $color-dark-fonts;
     position: relative;
+    width: 85%;
+    float: right;
+    padding: 25px 20px;
 
     &::-webkit-input-placeholder { color: $color-dark-fonts; }
     &:-moz-placeholder { color: $color-dark-fonts; }
     &::-moz-placeholder { color: $color-dark-fonts; }
     &:-ms-input-placeholder { color: $color-dark-fonts; }
+
+    @media #{$mobile} {
+        width: 100%;
+    }
 }
 
 input[type="text"]:focus, textarea:focus {
@@ -30,4 +53,21 @@ input[type="text"]:focus, textarea:focus {
 textarea {
     min-height: rem-calc(100px);
     resize: vertical;
+    margin-bottom: 0;
+}
+
+input[type="submit"] {
+    float: right;
+    background: #2a2c2b;
+    padding: rem-calc(15px) rem-calc(35px);
+    border: none;
+    color: #d7d5d3;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    @media #{$mobile} {
+        float: none;
+        width: 100%;
+        margin-top: 15px;
+    }
 }

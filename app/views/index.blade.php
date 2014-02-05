@@ -167,9 +167,13 @@
                     <img src="{{ asset('img/logo.png') }}" />
                     <h2>[<span>contact</span>] Get in touch</h2>
                     {{ Form::open(array('/' => 'foo/bar')) }}
-                        <input name="who" type="text" placeholder="who are you?">
-                        <input name="email" type="text" placeholder="what's your email?">
-                        <textarea name="what" cols="50" rows="10" placeholder="what do you want?"></textarea>
+                        <label for="who"><img src="{{ asset('img/who-logo.png') }}"></label>
+                        <input class="who" name="who" type="text" placeholder="who are you?">
+                        <label for="email"><img src="{{ asset('img/email-logo.png') }}"></label>
+                        <input class="email" name="email" type="text" placeholder="what's your email?">
+                        <label for="what"><img src="{{ asset('img/what-logo.png') }}"></label>
+                        <textarea class="what" name="what" cols="50" rows="10" placeholder="what do you want?"></textarea>
+                        <input type="submit" value="Submit">
                     {{ Form::close() }}
                 </div>
             </div>
