@@ -17,7 +17,15 @@
 
             <strong>Back-end</strong>
             <p>{{ $project->description_backend }}</p>
-            <img class="browser-showcase" src="{{ asset('img/works/' . $project->string . '-work-backend-2.png'); }}" />
+            <ul class="example-orbit" data-orbit>
+                <?php $count = 2; ?>
+                @while(file_exists( public_path('img/works/' . $project->string . '-work-backend-'.$count.'.png') ))
+                    <li>
+                        <img src="{{asset('img/works/' . $project->string . '-work-backend-'.$count.'.png')}}" alt="slide 3" />
+                    </li>
+                    <?php $count++; ?>
+                @endwhile
+            </ul>
         </div>
     </div>
 </main>

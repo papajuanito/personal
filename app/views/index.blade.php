@@ -70,7 +70,7 @@
                     <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
                         <a href="{{ URL::to('work/nacion-play') }}"></a>
                     </li>
-                    <li class="work-item medium open-mobile">
+                    <li class="work-item medium">
                         <a href="{{ URL::to('work/emerge') }}"></a>
                     </li>
                     <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-herbal.png')}} ); background-size: cover; background-position: center;">
@@ -82,7 +82,7 @@
                     <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-destinations.png')}} ); background-size: cover; background-position: center;">
                         <a href="{{ URL::to('work/destinations-guide') }}"></a>
                     </li>
-                    <li class="work-item small last open-mobile">
+                    <li class="work-item small last">
                         <a href="{{ URL::to('work/memorial-heart') }}"></a>
                     </li>
                 </ul>

@@ -15,6 +15,6 @@ Route::get('/',  array('as' => 'index', 'uses' => 'AppController@showIndex'));
 
 Route::get('work',  array('as' => 'work', 'uses' => 'AppController@showWork'));
 
-Route::get('work-single',  array('as' => 'work-single', 'uses' => 'AppController@showSingleWork'));
+// Route::get('work-single',  array('as' => 'work-single', 'uses' => 'AppController@showSingleWork'));
 
-Route::get('work/{id?}', 'AppController@showWork');
+Route::get('work/{id?}', array('as' => 'work', 'uses' => 'AppController@showWork'));

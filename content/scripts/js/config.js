@@ -12,6 +12,7 @@ require({
     paths: {
         foundation: '../../bower_components/foundation/js/foundation',
         reveal: '../../bower_components/foundation/js/foundation/foundation.reveal',
+        orbit: '../../bower_components/foundation/js/foundation/foundation.orbit',
         jquery: '../../bower_components/jquery/jquery',
         modernizr: '../../bower_components/modernizr/modernizr',
         microplugin: '../../bower_components/microplugin/src/microplugin',
@@ -40,6 +41,11 @@ require({
             ]
         },
         reveal: {
+            deps: [
+                'foundation'
+            ]
+        },
+        orbit: {
             deps: [
                 'foundation'
             ]

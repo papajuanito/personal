@@ -8,6 +8,7 @@ define (require) ->
     $ = require('jquery')
     Index = require('app/index')
     require('reveal')
+    require('orbit')
 
     # Map routes to their modules
     routes =
@@ -53,5 +54,15 @@ define (require) ->
 
         foundation: ->
             $(document).foundation 'reveal'
-
+            $(document).foundation(
+                'orbit' :
+                    animation: 'slide',
+                    timer: true,
+                    timer_speed : 4000,
+                    pause_on_hover: true,
+                    animation_speed: 500,
+                    navigation_arrows: false,
+                    bullets: true,
+                    slide_number: false
+            )
     return new App

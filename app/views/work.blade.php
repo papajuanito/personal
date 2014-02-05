@@ -11,125 +11,37 @@
                     <a href="{{ URL::to('work/nacion-play') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-emerge.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>lexus</b>
-                                <p>Car Model Configurator</p>
-                                <a href="{{ URL::to('work/emerge') }}">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/emerge') }}"></a>
                 </li>
                 <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-herbal.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>copa airlines</b>
-                                <p>Descubre Panama con Copa</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/herbal-essences') }}"></a>
                 </li>
                 <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-lexus.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>playstation</b>
-                                <p>Nación Play</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/lexus') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-destinations.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>lexus</b>
-                                <p>Car Model Configurator</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/destinations-guide') }}"></a>
                 </li>
                 <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-heart.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>copa airlines</b>
-                                <p>Descubre Panama con Copa</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/memorial-heart') }}"></a>
                 </li>
                 <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-panama.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>playstation</b>
-                                <p>Nación Play</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/descubre-panama') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-pledge.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>lexus</b>
-                                <p>Car Model Configurator</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/pledge-fight-cancer') }}"></a>
                 </li>
                 <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-jdch.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>copa airlines</b>
-                                <p>Descubre Panama con Copa</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/jdch-20') }}"></a>
                 </li>
                 <li class="work-item big last" style="background: url({{ asset('img/thumbnails/thumb-discovery.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>playstation</b>
-                                <p>Nación Play</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/discovery') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-esposible.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>lexus</b>
-                                <p>Car Model Configurator</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/esposible') }}"></a>
                 </li>
                 <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-gustazos.png')}} ); background-size: cover; background-position: center;">
-                    <div class="circle">
-                        <div class="work-sum">
-                            <div class="content big">
-                                <b>copa airlines</b>
-                                <p>Descubre Panama con Copa</p>
-                                <a href="#">View Project</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{ URL::to('work/gustazos') }}"></a>
                 </li>
             @else
                 <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
