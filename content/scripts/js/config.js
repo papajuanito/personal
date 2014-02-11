@@ -13,6 +13,7 @@ require({
         foundation: '../../bower_components/foundation/js/foundation',
         reveal: '../../bower_components/foundation/js/foundation/foundation.reveal',
         orbit: '../../bower_components/foundation/js/foundation/foundation.orbit',
+        offcanvas: '../../bower_components/foundation/js/foundation/foundation.offcanvas',
         jquery: '../../bower_components/jquery/jquery',
         modernizr: '../../bower_components/modernizr/modernizr',
         microplugin: '../../bower_components/microplugin/src/microplugin',
@@ -46,6 +47,11 @@ require({
             ]
         },
         orbit: {
+            deps: [
+                'foundation'
+            ]
+        },
+        offcanvas: {
             deps: [
                 'foundation'
             ]

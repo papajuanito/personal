@@ -17,6 +17,8 @@ define (require) ->
             $current = 1
             $images = []
 
+            $('.profile-links a').addClass('pop');
+
             preload = ->
                 i = 0
                 while i < preload.arguments.length
@@ -25,7 +27,7 @@ define (require) ->
                     i++
 
                 galleryInterval = setInterval( ->
-                    if($current <= 3)
+                    if($current <= 2)
                         $current++
                     else
                         $current = 1;
@@ -41,8 +43,7 @@ define (require) ->
                 console.log($hero.hasClass('mobile'))
                 preload(
                     $assets + 'img/header/header-2.jpg',
-                    $assets + 'img/header/header-3.jpg',
-                    $assets + 'img/header/header-4.jpg',
+                    $assets + 'img/header/header-3.jpg'
                 )
 
             fixedHeader = ->

@@ -7,7 +7,7 @@
         <h2>[<b>work</b>] Sites & apps</h2>
         <ul class="work-list">
             @if(Agent::isMobile())
-                <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
+                <li class="work-item big open-mobile" style="background: #fa3c27 url({{ asset('img/mobile-orange-ps.jpg')}}) center no-repeat">
                     <a href="{{ URL::to('work/nacion-play') }}"></a>
                 </li>
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-emerge.png')}} ); background-size: cover; background-position: center;">
@@ -19,7 +19,7 @@
                 <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-lexus.png')}} ); background-size: cover; background-position: center;">
                     <a href="{{ URL::to('work/lexus') }}"></a>
                 </li>
-                <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-destinations.png')}} ); background-size: cover; background-position: center;">
+                <li class="work-item medium open-mobile" style="background: #fa3c27 url({{ asset('img/mobile-orange-copa.jpg')}}) center no-repeat; background-size: 120px;">
                     <a href="{{ URL::to('work/destinations-guide') }}"></a>
                 </li>
                 <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-heart.png')}} ); background-size: cover; background-position: center;">
@@ -31,7 +31,7 @@
                 <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-pledge.png')}} ); background-size: cover; background-position: center;">
                     <a href="{{ URL::to('work/pledge-fight-cancer') }}"></a>
                 </li>
-                <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-jdch.png')}} ); background-size: cover; background-position: center;">
+                <li class="work-item small last open-mobile" style="background: #fa3c27 url({{ asset('img/mobile-orange-20-jdch.jpg')}}) center no-repeat; background-size: 100px;">
                     <a href="{{ URL::to('work/jdch-20') }}"></a>
                 </li>
                 <li class="work-item big last" style="background: url({{ asset('img/thumbnails/thumb-discovery.png')}} ); background-size: cover; background-position: center;">

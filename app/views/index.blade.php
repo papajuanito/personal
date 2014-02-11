@@ -67,7 +67,7 @@
             <h2>[<span>work</span>] Sites & apps</h2>
             @if(Agent::isMobile())
                 <ul class="work-list">
-                    <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-playstation.png')}} ); background-size: cover; background-position: center;">
+                    <li class="work-item big open-mobile" style="background: #fa3c27 url({{ asset('img/mobile-orange-ps.jpg')}}) center no-repeat">
                         <a href="{{ URL::to('work/nacion-play') }}"></a>
                     </li>
                     <li class="work-item medium">
@@ -79,10 +79,10 @@
                     <li class="work-item big" style="background: url({{ asset('img/thumbnails/thumb-lexus.png')}} ); background-size: cover; background-position: center;">
                         <a href="{{ URL::to('work/lexus') }}"></a>
                     </li>
-                    <li class="work-item medium" style="background: url({{ asset('img/thumbnails/thumb-destinations.png')}} ); background-size: cover; background-position: center;">
+                    <li class="work-item medium open-mobile" style="background: #fa3c27 url({{ asset('img/mobile-orange-copa.jpg')}}) center no-repeat; background-size: 120px;">
                         <a href="{{ URL::to('work/destinations-guide') }}"></a>
                     </li>
-                    <li class="work-item small last">
+                    <li class="work-item small last" style="background: url({{ asset('img/thumbnails/thumb-heart.png')}} ); background-size: cover; background-position: center;">
                         <a href="{{ URL::to('work/memorial-heart') }}"></a>
                     </li>
                 </ul>
@@ -105,8 +105,8 @@
                         <div class="circle">
                             <div class="work-sum">
                                 <div class="content big">
-                                    <b>lexus</b>
-                                    <p>Car Model Configurator</p>
+                                    <b>eMerge</b>
+                                    <p>eMerge Americas</p>
                                     <a href="{{ URL::to('work/emerge') }}">View Project</a>
                                 </div>
                             </div>
@@ -116,8 +116,8 @@
                         <div class="circle">
                             <div class="work-sum">
                                 <div class="content big">
-                                    <b>copa airlines</b>
-                                    <p>Descubre Panama con Copa</p>
+                                    <b>herbal essences</b>
+                                    <p>Facebook Tab</p>
                                     <a href="{{ URL::to('work/herbal-essences') }}">View Project</a>
                                 </div>
                             </div>
@@ -127,8 +127,8 @@
                         <div class="circle">
                             <div class="work-sum">
                                 <div class="content big">
-                                    <b>copa airlines</b>
-                                    <p>Descubre Panama con Copa</p>
+                                    <b>mhs</b>
+                                    <p>Follow Your Heart Campaign</p>
                                     <a href="{{ URL::to('work/memorial-heart') }}">View Project</a>
                                 </div>
                             </div>
@@ -138,8 +138,8 @@
                         <div class="circle">
                             <div class="work-sum">
                                 <div class="content big">
-                                    <b>lexus</b>
-                                    <p>Car Model Configurator</p>
+                                    <b>copa airlines</b>
+                                    <p>Destinations Guide</p>
                                     <a href="{{ URL::to('work/destinations-guide') }}">View Project</a>
                                 </div>
                             </div>
@@ -149,8 +149,8 @@
                         <div class="circle">
                             <div class="work-sum">
                                 <div class="content big">
-                                    <b>playstation</b>
-                                    <p>Nación Play</p>
+                                    <b>lexus</b>
+                                    <p>Car Model Configurator</p>
                                     <a href="{{ URL::to('work/lexus') }}">View Project</a>
                                 </div>
                             </div>

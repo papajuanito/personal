@@ -9,6 +9,7 @@ define (require) ->
     Index = require('app/index')
     require('reveal')
     require('orbit')
+    require('offcanvas')
 
     # Map routes to their modules
     routes =
@@ -41,6 +42,10 @@ define (require) ->
             $window.on 'scroll.main', (e) =>
                 window.requestAnimationFrame =>
                     @disableHover()
+
+            $('.right-off-canvas-toggle').on('click', (e) ->
+                e.preventDefault
+            )
 
         disableHover: ->
             clearTimeout(timer);

@@ -118,6 +118,14 @@
     }
 }
 
+#view-work-single {
+
+    @media #{$mobile} {
+        padding-top: 0;
+    }
+
+}
+
 #view-work{
     padding: 120px 0;
 

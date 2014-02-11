@@ -45,11 +45,17 @@
         @show
     </head>
     <body data-base="{{ url() }}" data-assets="{{ asset('') }}" data-route="{{ Route::current()->getName() }}" itemscope itemtype="http://schema.org/Event">
-        @include('partials/header')
+        <div class="off-canvas-wrap">
+            <div class="inner-wrap">
+                @include('partials/header')
 
-        @yield('content')
+                @yield('content')
 
-        @include('partials/footer')
+                @include('partials/footer')
+
+                <a class="exit-off-canvas"></a>
+            </div>
+        </div>
 
         @if ($environment == 'production' || $environment == 'staging')
         <!--script src="{{ asset('scripts/main.min.js') }}"></script-->
@@ -57,7 +63,5 @@
         @else
         <script data-main="{{ asset('scripts/js/config') }}" src="{{ asset('bower_components/requirejs/require.js') }}"></script>
         @endif
-
-        <div class="reveal-modal-bg"></div>
     </body>
 </html>

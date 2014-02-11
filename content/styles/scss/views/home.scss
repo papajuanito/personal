@@ -79,7 +79,7 @@ $hero-height: rem-calc(400px);
         padding: 2rem 0;
         height: auto;
 
-        background-position: 60% 25px;
+        background-position: 60% 0;
         background-size: cover;
 
         img{
@@ -87,7 +87,7 @@ $hero-height: rem-calc(400px);
             display: block;
             float: none;
             margin: 0 auto;
-            padding-top: rem-calc(70px);
+            padding-top: rem-calc(10px);
         }
 
         .content{
@@ -368,6 +368,20 @@ $hero-height: rem-calc(400px);
             a{
                 width: 65px;
                 height: 65px;
+                -webkit-box-shadow:inset 0 0 1px 2px $color-orange;
+                box-shadow:inset 0 0 1px 2px $color-orange;
+
+                &.resume{
+                    background: url('../img/resume-logo-hover.png') center no-repeat;
+                }
+
+                &.github{
+                    background: url('../img/github-logo-hover.png') center no-repeat;
+                }
+
+                &.codeeval{
+                    background: url('../img/codeeval-logo-hover.png') center no-repeat;
+                }
             }
 
         }
@@ -594,9 +608,14 @@ $hero-height: rem-calc(400px);
 }
 
 .contact{
+
+    padding-bottom: em-calc(400px);
+
     @media #{$mobile} {
 
         border-right: none;
+
+        padding-bottom: 0;
 
         form{
             border-bottom: 1px solid $color-orange;
